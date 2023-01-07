@@ -4,7 +4,7 @@ import  ReactDOM  from "react-dom/client";
 
 //const h1 = React.createElement("h1", { id: "key" }, "Heading 1");
 
-let Title = (
+let title = (
     <h2 id="aks">Hello Aakash</h2>
 );
 
@@ -24,7 +24,7 @@ const Heading2 = () => {
             {<Header />}
             <h2>Hello My name is Akshay.</h2>
             {Title2()} 
-            {Title}
+            {title}
             {Title3()}
         </div>
     )
