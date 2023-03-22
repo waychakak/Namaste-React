@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client"
 
 
-const title = (
+const Title = () => (
     <a href="/">
         <img alt="logo" src="https://logosandtypes.com/wp-content/uploads/2021/01/swiggy.svg" />
     </a>
@@ -11,7 +11,7 @@ const title = (
 const Header = () => {
     return(
         <div className="header">
-            {title}
+            <Title />
             <ul>
                 <li>Home </li>
                 <li>About </li>
@@ -753,8 +753,8 @@ const restrautList = [
     },
   ];
 
-const RestarantCard = ({restaurant}) => {
-  const {name, cuisines, cloudinaryImageId, lastMileTravelString} = restaurant.data;
+const RestarantCard = ({name, cuisines, cloudinaryImageId, lastMileTravelString}) => {
+  // const } = restaurant.data;
     return(
         <div className="card">
             <img src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" +cloudinaryImageId} />
@@ -768,16 +768,12 @@ const RestarantCard = ({restaurant}) => {
 const Body = () => {
     return(
         <div className="restaurantlist">
-            <RestarantCard restaurant={restrautList[0]} />
-            <RestarantCard restaurant={restrautList[1]} />
-            <RestarantCard restaurant={restrautList[2]} />
-            <RestarantCard restaurant={restrautList[3]} />
-            <RestarantCard restaurant={restrautList[4]} />
-            <RestarantCard restaurant={restrautList[5]} />
+            {restrautList.map((restaurant) => {
+                return <RestarantCard {...restaurant.data} key={restaurant.data.id} />;
+            })}  
         </div>
-        
-    )
-}
+    );
+};
 
 const ApplyLayout = () => {
     return(
