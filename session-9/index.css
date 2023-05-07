@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+* {
+    box-sizing: border-box;
+}
+.header {
+    height: 80px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+.header img {
+    width: 60px;
+    max-width: 100%;
+}
+.header ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.header li {
+    padding: 10px;
+}
+.card {
+    width: 300px;
+    padding: 10px;
+}
+.card img {
+    max-width: 100%;
+}
+.restaurantlist {
+    padding: 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.restaurantlist .card {
+    width: 300px;
+    margin: 10px;
+    border: 1px solid gainsboro;
+}
+
+
+
+
+
